@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Introduction to matrix operations</title>
+<meta name="author" content="(inti)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///usr/local/src/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///usr/local/src/reveal.js/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///usr/local/src/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Introduction to matrix operations</h1><p class="date">Created: 2019-05-13 Mon 14:20</p>
+</section>
+<section>
+<section id="slide-org9d00835">
+<h2 id="org9d00835">Dimensionality</h2>
+<p>
+What does it mean for things to have dimensions?
+</p>
+
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./jupyter_dir/dimensions.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+</section>
+<section id="slide-org121deb1">
+<h3 id="org121deb1">Spaces</h3>
+<p class="fragment (appear appear)">
+meaning it takes a vector
+\(\boldsymbol{x}=\left( \begin{smallmatrix}x_1\\ \vdots \\ x_n
+ \end{smallmatrix}\right)\) 
+</p>
+
+</section>
+<section id="slide-org1ecae51">
+<h3 id="org1ecae51">Somethings</h3>
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./obipy-resources/4585cKF.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1d1eaba">
+<h2 id="org1d1eaba">The gradient</h2>
+<p class="fragment (appear)">
+Given a function \(f:\mathbb{R}^n\rightarrow\mathbb{R}\),
+</p>
+<p class="fragment (appear)">
+we have a gradient operator \(\nabla_{\boldsymbol{x}}\)
+</p>
+<p class="fragment (appear)">
+defined such that \(\nabla_{\boldsymbol{x}} f(\boldsymbol{x})_i =
+\frac{\partial}{\partial x_i}f(\boldsymbol{x})\).
+</p>
+</section>
+<section id="slide-org558939a">
+<h3 id="org558939a">Example</h3>
+<p class="fragment (appear)">
+Given a function \(f:\mathbb{R}^3\rightarrow\mathbb{R}\)
+</p>
+<p class="fragment (appear)">
+defined as \(f(\boldsymbol{x})=\frac{3}{x_1}-\exp(x_2) + {x_3}^2\)
+</p>
+<p class="fragment (appear)">
+what is the value of \(\nabla f(\boldsymbol{x})_2\)?
+</p>
+<p class="fragment (appear)">
+\[\boxed{\nabla f(\boldsymbol{x})_2 =
+\tfrac{\partial}{\partial x_2} (\tfrac{3}{x_1}-\exp (x_2) + {x_3}^2 )
+= -\exp(x_2)}\]
+</p>
+<p class="fragment (appear)">
+Similarly it can be shown that \(\nabla
+f(\boldsymbol{x})= \left( \begin{smallmatrix} -3{x_1}^{-2} \\ -\exp (x_2) \\ 2x_3
+\end{smallmatrix}\right)\)
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgd05dec2">
+<h2 id="orgd05dec2">The Jacobian matrix</h2>
+<p class="fragment (appear)">
+Given a function \(\boldsymbol{f}:\mathbb{R}^m \rightarrow
+\mathbb{R}^n\)
+</p>
+<p class="fragment (appear)">
+we have a Jacobian matrix \(\boldsymbol{J} \in \mathbb{R}^{n\times m}\)
+of \(\boldsymbol{f}\)
+</p>
+<p class="fragment (appear)">
+defined such that \(J_{i,j}=\frac{\partial}{\partial x_j } f( \boldsymbol{x}
+)_i\).
+</p>
+</section>
+<section id="slide-org49f0f8c">
+<h3 id="org49f0f8c">Example</h3>
+<p class="fragment (appear)">
+Given a function \(\boldsymbol{f}:\mathbb{R}^2\rightarrow \mathbb{R}^2\)
+</p>
+<p class="fragment (appear)">
+defined as \(\boldsymbol{f}(\boldsymbol{x})=\begin{pmatrix}
+2x_1+x_2\\ x_1 - {x_2}^2  \end{pmatrix}\)
+</p>
+<p class="fragment (appear)">
+what is the value of \(J_{1,2}\)?
+</p>
+<p class="fragment (appear)">
+\[\boxed{J_{1,2}=\tfrac{\partial}{\partial x_2} (2x_1+x_2) = 1}\]
+</p>
+
+<p class="fragment (appear)">
+Similarly it can be shown that \(\boldsymbol{J}=\begin{pmatrix}2&1\\ 1&-2x_2
+\end{pmatrix}\)
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="file:///usr/local/src/reveal.js/lib/js/head.min.js"></script>
+<script src="file:///usr/local/src/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///usr/local/src/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'file:///usr/local/src/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///usr/local/src/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///usr/local/src/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'file:///usr/local/src/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
