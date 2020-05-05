@@ -1,4 +1,7 @@
 #+OPTIONS: num:nil toc:nil author:nil date:nil 
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: moon
+#+REVEAL_TRANS: fade
 #+TITLE: Introduction to matrix operations
 * Dimensionality
 What does it mean for things to have dimensions?

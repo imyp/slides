@@ -7,9 +7,9 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="file:///usr/local/src/reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
 
-<link rel="stylesheet" href="file:///usr/local/src/reveal.js/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
 
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -18,7 +18,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'file:///usr/local/src/reveal.js/css/print/pdf.css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -27,11 +27,11 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Introduction to matrix operations</h1><p class="date">Created: 2019-05-13 Mon 14:20</p>
+<section id="sec-title-slide"><h1 class="title">Introduction to matrix operations</h1><p class="date">Created: 2019-05-14 Tue 14:51</p>
 </section>
 <section>
-<section id="slide-org9d00835">
-<h2 id="org9d00835">Dimensionality</h2>
+<section id="slide-org314fc48">
+<h2 id="org314fc48">Dimensionality</h2>
 <p>
 What does it mean for things to have dimensions?
 </p>
@@ -44,8 +44,8 @@ Sorry, your browser does not support SVG.</object>
 </p>
 </div>
 </section>
-<section id="slide-org121deb1">
-<h3 id="org121deb1">Spaces</h3>
+<section id="slide-orga2c14d4">
+<h3 id="orga2c14d4">Spaces</h3>
 <p class="fragment (appear appear)">
 meaning it takes a vector
 \(\boldsymbol{x}=\left( \begin{smallmatrix}x_1\\ \vdots \\ x_n
@@ -53,11 +53,11 @@ meaning it takes a vector
 </p>
 
 </section>
-<section id="slide-org1ecae51">
-<h3 id="org1ecae51">Somethings</h3>
+<section id="slide-orgb44cc17">
+<h3 id="orgb44cc17">Somethings</h3>
 
 <div class="figure">
-<p><object type="image/svg+xml" data="./obipy-resources/4585cKF.svg" class="org-svg">
+<p><object type="image/svg+xml" data="./obipy-resources/26324Je0.svg" class="org-svg">
 Sorry, your browser does not support SVG.</object>
 </p>
 </div>
@@ -65,8 +65,8 @@ Sorry, your browser does not support SVG.</object>
 </section>
 </section>
 <section>
-<section id="slide-org1d1eaba">
-<h2 id="org1d1eaba">The gradient</h2>
+<section id="slide-org135982a">
+<h2 id="org135982a">The gradient</h2>
 <p class="fragment (appear)">
 Given a function \(f:\mathbb{R}^n\rightarrow\mathbb{R}\),
 </p>
@@ -78,8 +78,8 @@ defined such that \(\nabla_{\boldsymbol{x}} f(\boldsymbol{x})_i =
 \frac{\partial}{\partial x_i}f(\boldsymbol{x})\).
 </p>
 </section>
-<section id="slide-org558939a">
-<h3 id="org558939a">Example</h3>
+<section id="slide-org15ec943">
+<h3 id="org15ec943">Example</h3>
 <p class="fragment (appear)">
 Given a function \(f:\mathbb{R}^3\rightarrow\mathbb{R}\)
 </p>
@@ -102,8 +102,8 @@ f(\boldsymbol{x})= \left( \begin{smallmatrix} -3{x_1}^{-2} \\ -\exp (x_2) \\ 2x_
 </section>
 </section>
 <section>
-<section id="slide-orgd05dec2">
-<h2 id="orgd05dec2">The Jacobian matrix</h2>
+<section id="slide-orgddb79f8">
+<h2 id="orgddb79f8">The Jacobian matrix</h2>
 <p class="fragment (appear)">
 Given a function \(\boldsymbol{f}:\mathbb{R}^m \rightarrow
 \mathbb{R}^n\)
@@ -117,8 +117,8 @@ defined such that \(J_{i,j}=\frac{\partial}{\partial x_j } f( \boldsymbol{x}
 )_i\).
 </p>
 </section>
-<section id="slide-org49f0f8c">
-<h3 id="org49f0f8c">Example</h3>
+<section id="slide-orge2e244f">
+<h3 id="orge2e244f">Example</h3>
 <p class="fragment (appear)">
 Given a function \(\boldsymbol{f}:\mathbb{R}^2\rightarrow \mathbb{R}^2\)
 </p>
@@ -141,8 +141,8 @@ Similarly it can be shown that \(\boldsymbol{J}=\begin{pmatrix}2&1\\ 1&-2x_2
 </section>
 </div>
 </div>
-<script src="file:///usr/local/src/reveal.js/lib/js/head.min.js"></script>
-<script src="file:///usr/local/src/reveal.js/js/reveal.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -159,7 +159,7 @@ keyboard: true,
 overview: true,
 
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
 transitionSpeed: 'default',
 multiplex: {
     secret: '', // null if client
@@ -169,11 +169,11 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: 'file:///usr/local/src/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: 'file:///usr/local/src/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'file:///usr/local/src/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'file:///usr/local/src/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'file:///usr/local/src/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
 });
 </script>
 </body>
